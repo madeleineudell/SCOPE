@@ -37,6 +37,6 @@ function inpospoly{R <: Real}(f::Function, w::Array{R}) # The input function mus
 end
 
 function insympoly{R <: Real}(f::Function, w::Array{R}) # The input function must be 0 at the empty set
-  checker = insympoly(f, abs(w))
+  checker = insubpoly(f, abs(w))
   return checker
 end
